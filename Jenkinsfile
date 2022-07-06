@@ -1,14 +1,14 @@
 pipeline {
   environment {
     imagename = "nabeel636/pipe1"
-    registryCredential = 'hub'
+    registryCredential = 'nabeel'
     dockerImage = ''
   }
   agent any
   stages {
     stage('Clone Git') {
       steps {
-        git([url: 'git@github.com:nabeeljarral/spring.git', credentialsId: 'githubcreds', branch: 'master'])
+        git([url: 'git@github.com:nabeeljarral/spring.git', credentialsId: 'nabeel', branch: 'master'])
 
       }
     }
