@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Push Docker image') {
             environment {
-                DOCKER_HUB_LOGIN = credentials('hub')
+                DOCKER_HUB_LOGIN = credentials('nabeel')
           }  
           
         steps {
