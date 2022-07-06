@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    imagename = "nabeel636/pipe1"
+    imagename = "nabeel636/gradle"
     registryCredential = 'nabeel'
     dockerImage = ''
   }
@@ -34,7 +34,7 @@ pipeline {
           
         steps {
                 sh 'docker login --username=$DOCKER_HUB_LOGIN_USR --password=$DOCKER_HUB_LOGIN_PSW'
-                sh './gradlew dockerPush nabeel636/pipe1:25'
+                sh './gradlew dockerPush nabeel636/gradle:25'
             }  
     }
   }
