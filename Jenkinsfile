@@ -1,4 +1,4 @@
-git@github.com:nabeeljarral/spring.git
+
 pipeline {
   environment {
     imagename = "frehman/pipe1"
