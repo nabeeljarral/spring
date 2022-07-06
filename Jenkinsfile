@@ -28,15 +28,15 @@ pipeline {
                 sh './gradlew build'
                 }
         }
-        stage('Push Docker image') {
-            environment {
-                DOCKER_HUB_LOGIN = credentials('hub')
-          }  
+        #stage('Push Docker image') {
+         #   environment {
+          #      DOCKER_HUB_LOGIN = credentials('hub')
+          #}  
           
-        steps {
-                sh 'docker login --username=$DOCKER_HUB_LOGIN_USR --password=$DOCKER_HUB_LOGIN_PSW'
-                sh './gradlew dockerPush nabeel636/gradle:25'
-            }  
-    }
+        #steps {
+                #sh 'docker login --username=$DOCKER_HUB_LOGIN_USR --password=$DOCKER_HUB_LOGIN_PSW'
+                #sh './gradlew dockerPush nabeel636/gradle:25'
+            #}  
+    #}
   }
 }
